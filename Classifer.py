@@ -95,29 +95,3 @@ plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
 plt.show()
 
-
-
-#Show a few correct and incorrect predictions
-num_images = 10
-fig, axes = plt.subplots(num_images, 2, figsize=(10, 2 * num_images))
-
-for i, ax in enumerate(axes):
-    # Find a correctly classified image
-    while True:
-        idx = np.random.randint(len(test_images))
-        if true_labels[idx] == predicted_labels[idx]:
-            break
-    ax[0].imshow(test_images[idx])
-    ax[0].set_title(f'True: {true_labels[idx]}, Predicted: {predicted_labels[idx]}')
-    ax[0].axis('off')
-
-    # Find an incorrectly classified image
-    while True:
-        idx = np.random.randint(len(test_images))
-        if true_labels[idx] != predicted_labels[idx]:
-            break
-    ax[1].imshow(test_images[idx])
-    ax[1].set_title(f'True: {true_labels[idx]}, Predicted: {predicted_labels[idx]}')
-    ax[1].axis('off')
-
-plt.show()
