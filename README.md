@@ -1,8 +1,9 @@
 # Image-Classifer
 
-The analysis demonstrates the process of creating, training, and evaluating a CNN model for image classification with a focus on ship detection by:
+Data Source: 
+The CIFAR-10 dataset:https://www.cs.toronto.edu/~kriz/cifar.html
 
--Importing necessary modules and loading the CIFAR-10 dataset.
+### The analysis demonstrates the process of creating, training, and evaluating a Convolutional Neural Network (CNN) model in Python for image classification with a focus on ship detection by:
 
 -Filtering out ship images (label 8) from both training and test data.
 
